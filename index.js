@@ -1,11 +1,53 @@
-function plus (){
-  let number1,number2,result;
-  number1 = document.getElementById('n1').value;
-  number1 = parseInt(number1);
+function plus() {
+    let num1, num2, result;
+    num1 = document.getElementById('n1').value;
+    num1 = eval(num1)
 
-  number2 = document.getElementById('n2').value;
-  number2 = parseInt(number2);
+    num2 = document.getElementById('n2').value;
+    num2 = eval(num2)
 
-  result = number1 + numder2;
-  document.getElementById('out').innerHTML = result;
+    result = num1 + num2;
+    document.getElementById('out').innerHTML = result.toFixed(1);
+}
+
+function minus() {
+    let num1, num2, result;
+    num1 = document.getElementById('n1').value;
+    num1 = eval(num1)
+
+    num2 = document.getElementById('n2').value;
+    num2 = eval(num2)
+
+    result = num1 - num2;
+    document.getElementById('out').innerHTML = result.toFixed(2);
+}
+
+function divide() {
+    let num1, num2, result;
+    num1 = document.getElementById('n1').value;
+    num1 = eval(num1)
+
+    num2 = document.getElementById('n2').value;
+    num2 = eval(num2)
+
+    result = num1 / num2;
+
+    if (num2 != 0) {
+        document.getElementById('out').innerHTML = result.toFixed(2);
+    } else if(num2 === 0){
+        
+        document.getElementById('out').innerHTML = "нізя";
+    }
+}
+
+function multiplicate() {
+    let num1, num2, result;
+    num1 = document.getElementById('n1').value;
+    num1 = eval(num1)
+
+    num2 = document.getElementById('n2').value;
+    num2 = eval(num2)
+
+    result = num1 * num2;
+    document.getElementById('out').innerHTML = result.toFixed(2);
 }
